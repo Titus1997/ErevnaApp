@@ -1,0 +1,56 @@
+@import './../../theme.scss';
+
+footer {
+    background-color: $white-color;
+    border-bottom: 1px solid $lighter-gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 2px 3px $lighter-gray;
+    font-family: Arial;
+
+    .footernav{
+        display: flex;
+        max-width: 1050px;
+        margin: 0 auto;
+        justify-content: space-between;
+
+    .logo {
+        padding: 0px;
+        width: auto;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav {
+        display: flex;
+        padding-right: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+
+        .footer-link {
+            padding: 0 0.5rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: $dark-blue-color;
+            transition: 0.2s ease;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $lightest-gray;
+            }
+        }
+
+        .registered-mark{
+            float: right;
+            margin: 0 auto;
+            color: #999;
+        }
+    }
+    }   
+}

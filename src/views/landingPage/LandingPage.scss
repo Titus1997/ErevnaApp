@@ -1,0 +1,67 @@
+@import './../../theme.scss';
+
+body{
+  background: $lightest-gray;
+}
+
+.landing-page {
+  
+  height: 100%;
+
+  .container{
+    display: flex;
+    align-items: stretch;
+    max-width: 1050px;
+    min-width: 600px;
+    margin: 30px auto;
+    padding: 50px;
+    border-radius: 10px;
+    background: $white-color;
+    border: 1px solid $light-gray;
+    box-shadow: 0 2px 3px $lighter-gray;
+
+  .geosuggest__suggests--hidden {
+    max-height: 0;
+    overflow: hidden;
+    border-width: 0;
+  }
+
+  .geosuggest__item--active {
+    background: #267dc0;
+    color: #fff;
+  }
+
+  .landing-page-content {
+    margin-top: 2.5%;
+
+    .landing-page-dialog {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    h1, h3 {
+      width: 100%;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+      margin-top: 0px;
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 5px;
+    }
+
+    p {
+      text-align: justify;
+      color: black;
+    }
+  }
+}
+.homeImg{
+  width: 300px;
+  height: 480px;
+}
+}

@@ -1,0 +1,34 @@
+@import './../../theme.scss';
+
+.getapp{
+    display: flex;
+    margin: 0;
+    flex-shrink: 0;
+    padding: 0;
+    position: relative;
+
+    p{
+        color: #262626;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 10px 20px;
+        text-align: center;
+    }
+
+    .getapp-buttons{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin: 10px 0;
+
+        .getapp-img{
+            height: 40px;
+        }
+    }
+}
