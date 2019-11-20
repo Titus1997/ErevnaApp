@@ -1,12 +1,26 @@
 @import './../../theme.scss';
 
 body{
-  background: $lightest-gray;
+  background: #206ba5;
 }
 
 .landing-page {
-  
+  display: flex;
   height: 100%;
+
+  .home-background{
+      background-image:url('/assets/images/insidechurch.jpg');
+      background-attachment:fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  .authentication-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   .container{
     display: flex;

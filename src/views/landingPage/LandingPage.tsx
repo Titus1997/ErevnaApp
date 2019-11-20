@@ -23,9 +23,7 @@ export default class LandingPage extends React.Component<ILandingPageProps, ILan
         var element = (<div></div>);
         if (localStorage.getItem("token") == null) {
             element = (
-                <div className='right landing-page-dialog'>
-                    <AuthenticationView />
-                    <Getapp/>
+                <div className='right landing-page-dialog authentication-box'>
                 </div>);
         }
         return element;
@@ -41,15 +39,16 @@ export default class LandingPage extends React.Component<ILandingPageProps, ILan
             return (
                 <div className='landing-page'>
                     {/*<Header />*/}
-                        <div className='left landing-page-content'>
-                            <div>
-                                {/*<h1> Erevna </h1>
-                                <h3> Find nearby christian communities </h3>*/}
-                                <img src={homeImage} className='homeImg'/>
-                            </div>
+                        <div className='left landing-page-content home-background'>
+                            {/*<h1> Erevna </h1>
+                            <h3> Find nearby christian communities </h3>
+                            <img src={homeImage} className='homeImg'/>*/}
                         </div>
-                        {this.renderAuthorization()}
-                    <Footer />
+                        <div className='right landing-page-content authentication-box'>
+                            <AuthenticationView />
+                            <Getapp/>
+                        </div>
+                    {/*<Footer />*/}
                 </div>
             );
         }

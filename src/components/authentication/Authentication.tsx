@@ -13,9 +13,6 @@ interface IAuthenticationState {
     tabToRender: TabType;
 }
 
-/**
- * @author Maier Bogdan
- */
 export default class AuthenticationView extends React.Component <IAuthenticationProps, IAuthenticationState> {
 
     public constructor (props: IAuthenticationProps) {

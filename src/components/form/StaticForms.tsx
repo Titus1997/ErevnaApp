@@ -22,9 +22,6 @@ export let RegisterForm:JSX.Element =
             {key: 're-password', label: 'Retype Password', type: 'password', placeholder: 'retype password'},
             {key: 'firstname', label: 'First Name', type: 'text', placeholder: 'first name'},
             {key: 'lastname', label: 'Last Name', type: 'text', placeholder: 'last name'},
-            genderSelectProps,
-            {key: 'address', label: 'Address', type: 'text', placeholder: 'address'},
-            {key: 'birthdate', label: 'Date of birth', type: 'date', placeholder: 'birth date'},
             {key: 'terms', type: 'checkbox', label: 'Terms and conditions'},
         ]}
         onSubmit = {(formData) => {
@@ -33,19 +30,15 @@ export let RegisterForm:JSX.Element =
             });
             var invite:string = '';
             var address: Address = {addressId:0, addressString:''};
-            var userregister:UserRegister = {emailPhone: '', password:'', firstName:'', lastName:'', gender:0, dateOfBirth:'', address: address};
+            var userregister:UserRegister = {emailPhone: '', password:'', firstName:'', lastName:''};
             formData.forEach(element => {
                 switch (element.key) {
                     case "emailPhone": userregister.emailPhone = element.value; break;
                     case "password": userregister.password = element.value; break;
                     case "firstName": userregister.firstName = element.value; break;
                     case "lastName": userregister.lastName = element.value; break;
-                    case "birthdate": userregister.dateOfBirth = element.value; break;
-                    case "address": address.addressString = element.value; break;
-                    case "gender": if(element.value=="Male") userregister.gender = 0; if(element.value=="Female") userregister.gender = 1; break;
                 }
             });
-            userregister.address = address;
 
             fetch(registerURL, {
                 method: "PUT",

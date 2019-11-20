@@ -4,6 +4,7 @@
 
 html, body{
     color: rgba(0, 0, 0, 0.87);
+    height:100%;
     margin: 0;
     font-size: 0.875rem;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -11,6 +12,11 @@ html, body{
     line-height: 1.43;
     letter-spacing: 0.01071em;
     background-color: #fff;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
 }
 
 .shadow {
@@ -28,7 +34,7 @@ html, body{
 }
 
 .left, .right {
-    width: 100%;
+    width: 50%;
     height: 100%;
 }
 
