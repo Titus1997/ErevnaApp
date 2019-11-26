@@ -40,17 +40,18 @@ export default class AuthenticationView extends React.Component <IAuthentication
 
         return (
             <div className='auth-view'>
-                {<div className='tabs'> 
-                    <div className={this.state.tabToRender === 'login' ? tabButtonClass + ' sellected' : tabButtonClass} onClick={() => {this.changeTab('login')}}>
-                        Login
-                    </div>
-                    <div className={this.state.tabToRender === 'register' ? tabButtonClass + ' sellected' : tabButtonClass} onClick={() => {this.changeTab('register')}}>
-                        Register 
-                    </div>
-        </div>}
                 <div className='content'>
                     {this.state.tabToRender === 'login' ? loginForm : registerForm} 
                 </div>
+                
+                {this.state.tabToRender === 'login' ? 
+                <div>Don't have an account?
+                    <div onClick={() => {this.changeTab('register')}} color="blue">Register</div>
+                </div> :  
+                <div>Already have an account?
+                    <div onClick={() => {this.changeTab('login')}} color="blue">Login</div> 
+                </div>
+                }
             </div>
         );
     }

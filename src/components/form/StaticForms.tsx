@@ -4,20 +4,13 @@ import {Address, loginURL, registerURL, UserLogin, UserRegister} from "../../com
 import {Redirect} from "react-router";
 import { createBrowserHistory } from 'history';
 
-let genderSelectProps: IFormDropDown =  {
-    key: 'gender', 
-    label:'Gender', 
-    type:'select', 
-    valueSet: ['Male', 'Female']
-};
-
 export let RegisterForm:JSX.Element = 
     <Form
         key = 'register-form'
         title = ''
         submitLabel = 'Next'
         fields = {[
-            {key: 'emailphone', label: 'Email or Phone', type: 'text', placeholder: 'email@example.com'},
+            {key: 'Phone', label: 'Email or Phone', type: 'text', placeholder: 'email@example.com'},
             {key: 'password', label: 'Password', type: 'password', placeholder: 'password'},
             {key: 're-password', label: 'Retype Password', type: 'password', placeholder: 'retype password'},
             {key: 'firstname', label: 'First Name', type: 'text', placeholder: 'first name'},

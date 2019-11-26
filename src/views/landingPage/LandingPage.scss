@@ -1,7 +1,8 @@
 @import './../../theme.scss';
 
 body{
-  background: #206ba5;
+  background-color: #1fc8db;
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 
 .landing-page {
@@ -14,7 +15,14 @@ body{
       background-size: cover;
   }
 
+  .app-name{
+    font-family: 'Calistoga', cursive;
+    font-size: 4em;
+  }
+
   .authentication-box{
+    background-color: #173143;
+    background-image: linear-gradient(141deg, #113245 0%, #98204a 51%, #a68861 75%);
     display: flex;
     align-items: center;
     justify-content: center;

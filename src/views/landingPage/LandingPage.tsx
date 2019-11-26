@@ -38,15 +38,13 @@ export default class LandingPage extends React.Component<ILandingPageProps, ILan
         if(localStorage.getItem("token") == null){       
             return (
                 <div className='landing-page'>
-                    {/*<Header />*/}
                         <div className='left landing-page-content home-background'>
-                            {/*<h1> Erevna </h1>
-                            <h3> Find nearby christian communities </h3>
-                            <img src={homeImage} className='homeImg'/>*/}
                         </div>
                         <div className='right landing-page-content authentication-box'>
+                            <div className='app-name'>EREVNA</div>
                             <AuthenticationView />
                             <Getapp/>
+
                         </div>
                     {/*<Footer />*/}
                 </div>
