@@ -1,9 +1,12 @@
 @import './../../theme.scss';
 
+a{
+    color: blue;
+    cursor: pointer;
+}
+
 .auth-view {
     width: 410px;
-    border: 1px solid gray;
-    background-color: #fefefe;
     border-radius: 5px;
     overflow: hidden;
 
@@ -24,6 +27,10 @@
                 background-color: $white-color;
             }
         }
+    }
+
+    .formswitch{
+        text-align: center;
     }
 }
 

@@ -45,11 +45,11 @@ export default class AuthenticationView extends React.Component <IAuthentication
                 </div>
                 
                 {this.state.tabToRender === 'login' ? 
-                <div>Don't have an account?
-                    <div onClick={() => {this.changeTab('register')}} color="blue">Register</div>
+                <div className='formswitch'>Don't have an account? 
+                    <a onClick={() => {this.changeTab('register')}} color="blue">Register</a>
                 </div> :  
-                <div>Already have an account?
-                    <div onClick={() => {this.changeTab('login')}} color="blue">Login</div> 
+                <div className='formswitch'>Already have an account? 
+                    <a onClick={() => {this.changeTab('login')}} color="blue">Login</a> 
                 </div>
                 }
             </div>

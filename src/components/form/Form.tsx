@@ -115,7 +115,7 @@ export default class Form extends React.Component<IFormProps, IFormState> {
 
     public render () {
 
-        let className: string = 'form shadow';
+        let className: string = 'form';
 
         return (
             <div className={className}>

@@ -33,7 +33,6 @@ export default class Footer extends React.Component<IFooterProps, IFooterState> 
                     <div className='nav'>
                         {this.renderFooterButton('About Us', "/", false)}
                         {this.renderFooterButton('Support', "/", false)}
-                        {this.renderFooterButton('Languages', "/", false)}
                     </div>
                     <span  className='registered-mark'>© 2019 Erevna</span>
                 </div>

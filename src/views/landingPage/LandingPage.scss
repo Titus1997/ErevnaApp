@@ -1,88 +1,116 @@
 @import './../../theme.scss';
 
 body{
-  background-color: #1fc8db;
-  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background-color: #ebeeef;
+  background-image: linear-gradient(141deg, #ebeeef 0%, #ebeeef 51%, #ebeeef 75%);
 }
 
 .landing-page {
   display: flex;
   height: 100%;
+  align-items: center;
+  justify-content: center;
 
-  .home-background{
-      background-image:url('/assets/images/insidechurch.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-
-  .app-name{
-    font-family: 'Calistoga', cursive;
-    font-size: 4em;
-  }
-
-  .authentication-box{
-    background-color: #173143;
-    background-image: linear-gradient(141deg, #113245 0%, #98204a 51%, #a68861 75%);
+  .authentication-content{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    -ms-flex-pack: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .container{
-    display: flex;
-    align-items: stretch;
-    max-width: 1050px;
-    min-width: 600px;
-    margin: 30px auto;
-    padding: 50px;
+    height: 680px;
     border-radius: 10px;
-    background: $white-color;
-    border: 1px solid $light-gray;
-    box-shadow: 0 2px 3px $lighter-gray;
-
-  .geosuggest__suggests--hidden {
-    max-height: 0;
     overflow: hidden;
-    border-width: 0;
+
+    @media screen and (max-width: 980px) {
+      height:auto;
+    }
+
+    .home-background{
+        background-image:url('/assets/images/insidechurch.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 510px;
+
+        @media screen and (max-width: 980px) {
+          display: none;
+        }
+    }
+
+    .app-name{
+      font-family: 'Calistoga', cursive;
+      font-size: 4em;
+    }
+
+    .authentication-side{
+      background-color: #173143;
+      background-image: linear-gradient(141deg, #5d727c 0%, #5d727c 51%, #5d727c 75%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .authentication-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #839198;
+      }
+    }
+
+    .container{
+      display: flex;
+      align-items: stretch;
+      max-width: 1050px;
+      min-width: 600px;
+      margin: 30px auto;
+      border-radius: 10px;
+      background: $white-color;
+      border: 1px solid $light-gray;
+      box-shadow: 0 2px 3px $lighter-gray;
+
+      .geosuggest__suggests--hidden {
+        max-height: 0;
+        overflow: hidden;
+        border-width: 0;
+      }
+
+      .geosuggest__item--active {
+        background: #267dc0;
+        color: #fff;
+      }
+
+      .landing-page-content {
+        margin-top: 2.5%;
+
+        h1, h3 {
+          width: 100%;
+        }
+
+        h1 {
+          margin-bottom: 5px;
+          margin-top: 0px;
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-top: 5px;
+        }
+
+        p {
+          text-align: justify;
+          color: black;
+        }
+      }
+    }
   }
-
-  .geosuggest__item--active {
-    background: #267dc0;
-    color: #fff;
+  .homeImg{
+    width: 300px;
+    height: 480px;
   }
-
-  .landing-page-content {
-    margin-top: 2.5%;
-
-    .landing-page-dialog {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-
-    h1, h3 {
-      width: 100%;
-    }
-
-    h1 {
-      margin-bottom: 5px;
-      margin-top: 0px;
-      font-size: 3rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-top: 5px;
-    }
-
-    p {
-      text-align: justify;
-      color: black;
-    }
-  }
-}
-.homeImg{
-  width: 300px;
-  height: 480px;
-}
 }
